@@ -1,0 +1,14 @@
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Duyurular";
+}
+<h2>Duyurular</h2>
+<a href="/Announcement/Add" class="btn btn-primary mb-3 mt-1">Yeni Duyuru Ekle</a>
+<ul>
+    @foreach (var announcement in Model)
+    {
+        <li>
+            <a href="/Announcement/Details/@announcement.Id">@announcement.Title</a> - @announcement.Date.ToString("dd/MM/yyyy")
+        </li>
+    }
+</ul>

@@ -1,0 +1,10 @@
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Anasayfa";
+}
+<main class="text-center">
+    <h1 class="h4">@ViewBag.Selamlama</h1>
+    <p>Toplam Duyuru Sayısı: @ViewBag.TotalAnnouncements</p>
+    <p>Şu Anki Tarih ve Saat: @ViewBag.CurrentDateTime</p>
+    <a href="/Announcement/Add" class="btn btn-primary">Duyuru Ekle</a>
+</main>

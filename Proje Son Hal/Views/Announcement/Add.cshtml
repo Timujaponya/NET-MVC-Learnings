@@ -1,0 +1,28 @@
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Yeni Duyuru Ekle";
+}
+<h2>Yeni Duyuru Ekle</h2>
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="Title">Başlık</label>
+        <input type="text" class="form-control" id="Title" name="Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Content">İçerik</label>
+        <textarea class="form-control" id="Content" name="Content" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="UserName">Sorumlu Kişi Adı</label>
+        <input type="text" class="form-control" id="UserName" name="User.Name" required />
+    </div>
+    <div class="form-group">
+        <label for="UserPhone">Sorumlu Kişi Telefonu</label>
+        <input type="text" class="form-control" id="UserPhone" name="User.Phone" required />
+    </div>
+    <div class="form-group">
+        <label for="UserEmail">Sorumlu Kişi Email</label>
+        <input type="email" class="form-control" id="UserEmail" name="User.Email" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Ekle</button>
+</form>

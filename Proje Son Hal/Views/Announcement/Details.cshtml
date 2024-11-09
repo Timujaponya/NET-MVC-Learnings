@@ -1,0 +1,19 @@
+@model AnnouncementApp.Models.Announcement
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Duyuru Detayı";
+}
+<h2>@Model.Title</h2>
+<p>@Model.Content</p>
+@if (Model.User != null)
+{
+    <p>Sorumlu Kişi: @Model.User.Name</p>
+    <p>Telefon: @Model.User.Phone</p>
+    <p>Email: @Model.User.Email</p>
+}
+else
+{
+    <p>Sorumlu Kişi: Bilinmiyor</p>
+}
+<p>Duyuru Tarihi: @Model.Date.ToString("dd/MM/yyyy")</p>
