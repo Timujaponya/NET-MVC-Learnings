@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belge</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <header>    
+        @await Html.PartialAsync("_Navbar")
+        @RenderSection("Header", required: false)
+    </header>   
+    <div class="container mt-3">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+    @RenderSection("Scripts", required: false)
+    <footer class="bg-danger text-white text-center p-3 mt-5">
+        &copy; 2021 - Course App
+</body>
+</html>
