@@ -1,0 +1,23 @@
+@model List<Announcement>
+@{
+    ViewBag.Title = "Announcement List";
+}
+
+<div class="cart">
+    <div class="cart-header">
+        <h3>Announcements</h3>
+    </div>
+    <div class="cart-body mt-5">
+        @foreach(var item in Model){
+            <div>
+                <h4>@item.Title</h4>
+                <p>@item.Content</p>
+            </div>
+        }
+        <div>
+            <a href="/Announcement/Create" class="btn btn-primary">Create</a>
+        </div>
+    </div>
+    <div class="cart-footer">
+    </div>
+</div>
